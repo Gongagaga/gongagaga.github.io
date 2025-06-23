@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../assets/fond.png");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ##### NAVBAR ##### */
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.navList {
+    z-index: 1;
+    position: fixed;
+    bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    border-radius: 4rem;
+    padding: 1rem 2.25rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.navlist ul li:hover {
+    cursor : pointer;
+}
+
+/* ##### ABOUT ##### */
+
+.header-about {
+    margin-top: 1em;
+}
+
+.home_g {
+    margin-bottom: 1em;
+}
+
+.home_name {
+    margin-bottom: 1em;
+}
+
+.cv-container {
+    display: flex;
+    align-items: center; /* Aligner verticalement le bouton et le trait */
+    justify-content: center ;
+    margin-bottom: 1em;
+}
+
+.dash {
+    width: 10%;
+    margin-left: 5px;
+    height: 2px; /* Hauteur du trait */
+    background-color: #fff; /* Couleur du trait */
+}
+
+.show-cv {
+    cursor:pointer;
+}
+
+.cv-scroll {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:1em;
+    width:20%;
+    overflow: hidden;  /* Empêche le contenu de déborder pendant la transition */
+    max-height: 0;  /* Valeur initiale pour masquer l'élément */
+    transition: max-height 0.5s ease-out; /* La transition prend 0.5 seconde */
+}
+
+.cv-scroll.show {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:1em;
+    width:20%;
+    max-height: 1000px;  /* Valeur qui permet d'afficher le contenu (ajustez si nécessaire) */
+}
+
+.main-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    /* margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 5em; */
+    margin:2em auto 5em auto;
+}
+
+.title-about {
+    font-size: x-large;
+    font-weight: bold;
+    display:block;
+}
+
+.img-about {
+    width:30%;
+}
+
+.pres-about {
+    width:40%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 2em 2em;
+    border-radius: 2em;
+    text-align: justify;
+}
+
+/* ##### TOOLS ##### */
+
+.tools {
+    width:46%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 2em 2em 2em 4em;
+    border-radius: 2em;
+    margin-bottom:10em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-tools {
+    margin-bottom: 2em;
+}
+
+/* ##### SKILLS ##### */
+
+.skills {
+    width:46%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 2em 2em 2em 4em;
+    border-radius: 2em;
+    margin-bottom:10em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-skills {
+    margin-bottom: 2em;
+}
+
+.main-skills {
+    display: flex;
+    margin-left: -3em;
+}
+
+.skill {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 3em 2em 3em 2em;
+    width: 22%;
+    border-radius: 2em;
+    text-align: center;
+    margin: 0 1em 1em 0;
+    font-weight: bold;
+}
+
+/* ##### FORMATIONS ##### */
+
+.formation-title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.form {
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 3em 2em 3em 2em;
+    width: 40%;
+    border-radius: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.formation-img {
+    width: 29%;
+}
+
+.formation-infos {
+    width: 55%;
+    margin: auto;
+}
+
+.form-last {
+    margin-bottom: 10em;
+}
+
+/* ##### WORKS ##### */
+
+.work-title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.work {
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 3em 2em 3em 2em;
+    width: 40%;
+    border-radius: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.work:last-child {
+    margin-bottom: 6em;
+}
+
+.work-front-fit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work-front {
+    border-radius: 2em;
+    opacity:0.5;
+    transition : opacity 0.2s;
+    cursor: pointer;
+    height: 200px;
+}
+
+.work-front:hover {
+    opacity: 1;
+    transition : opacity 0.2s;
+}
+
+.work-info {
+    width: 55%;
+    margin: auto;
+}
+
+/* ##### WORK ##### */
+
+.detail {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 2em 1em 2em 1em;
+    width: 40%;
+    border-radius: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.list {
+    text-align: start;
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.techno {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 2em 1em 2em 1em;
+    width: 16%;
+    border-radius: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6em;
+    margin-top: 1em;
+}
+
+/* ##### MENTIONS LEGALES ##### */
+
+.legals {
+    margin: 2em;
+}
+
+.legals-bot {
+    margin-bottom: 6em;
+}
+
+/* ##### FOOTER ##### */
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials i {
+    margin: 1em;
+}
+
+.legalsFooter {
+    margin-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navList {
+        width: 90%;
+    }
+
+    /* ##### ABOUT ##### */
+
+    .img-about {
+        width:90%;
+    }
+
+    .pres-about {
+        width:100%;
+    }
+
+    .main-about {
+        display: block;
+        width:90%;
+
+    }
+
+    /* ##### SKILLS ##### */
+
+    .skills {
+        width:90%;
+    }
+
+    
+    .main-skills {
+        display: flex;
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .skill {
+        width: 100%;
+    }
+
+    /* ##### TOOLS ##### */
+
+    .tools {
+        width:90%;
+    }
+    
+    /* ##### FORMATIONS ##### */
+
+.form {
+    display: block;
+    width: 90%;
+
+}
+
+.formation-img {
+    width: 60%;
+    margin-bottom: 1em;
+}
+
+.formation-infos {
+    width: 100%;
+}
+
+/* ##### WORKS ##### */
+
+.work {
+    display: block;
+    width: 90%;
+}
+
+.work-front-fit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work-front {
+    width:100%;
+    height: auto;
+    margin-bottom:1em;
+}
+
+.work-front:hover {
+    opacity: 1;
+    transition : opacity 0.2s;
+}
+
+.work-info {
+    width: 90%;
+}
+
+/* ##### WORK ##### */
+
+.detail {
+    width: 90%;
+}
+
+.techno {
+    width: 90%;
+}
+
+}
